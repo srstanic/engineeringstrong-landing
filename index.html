@@ -92,12 +92,7 @@
   ga('create', 'UA-82695908-1', 'auto');
 
   ga('require', 'outboundFormTracker', {
-    formSelector: '.outbound-form',
-    hitFilter: function(model, form) {
-      try {
-        model.set("eventLabel", String(model.get("eventLabel")) + "#email=" + form.elements[0].value, true);
-      } catch (er) {}
-    }
+    formSelector: '.outbound-form'
   });
   ga('require', 'outboundLinkTracker');
   ga('require', 'socialWidgetTracker');
